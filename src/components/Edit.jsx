@@ -17,7 +17,7 @@ function Edit() {
         const check = async () => {
             try {
                 await axios.get(
-                    `/api/v1/islogin`
+                    `https://notes-backend-nu.vercel.app/api/v1/islogin`
                 );
 
             } catch (error) {
@@ -31,7 +31,7 @@ function Edit() {
         const submithandler = async () => {
             try {
                 const { data } = await axios.post(
-                    `/api/v1/getnote`,
+                    `https://notes-backend-nu.vercel.app/api/v1/getnote`,
                     {
                         "id": id
                     }
@@ -52,7 +52,7 @@ function Edit() {
         const submithandler = async () => {
             try {
                 await axios.put(
-                    `/api/v1/editnotes`,
+                    `https://notes-backend-nu.vercel.app/api/v1/editnotes`,
                     {
                         "id": id,
                         "title": data.title,
