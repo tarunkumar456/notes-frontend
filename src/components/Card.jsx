@@ -19,7 +19,7 @@ function Card({ title, discription, ind, id }) {
         const submithandler = async () => {
             try {
                 const { data } = await axios.put(
-                    `/api/v1/deletenotes`,
+                    `https://notes-backend-nu.vercel.app/api/v1/deletenotes`,
                     {
                         "id": id
                     }
