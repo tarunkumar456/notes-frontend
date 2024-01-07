@@ -15,7 +15,7 @@ function Add() {
         const check = async () => {
             try {
                 await axios.get(
-                    `/api/v1/islogin`
+                    `https://notes-backend-nu.vercel.app/api/v1/islogin`
                 );
 
             } catch (error) {
@@ -30,7 +30,7 @@ function Add() {
         const submithandler = async () => {
             try {
                  await axios.put(
-                    `/api/v1/addnotes`,
+                    `https://notes-backend-nu.vercel.app/api/v1/addnotes`,
                     {
                         "title": data.title,
                         "discription": data.discription
