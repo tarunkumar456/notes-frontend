@@ -16,7 +16,7 @@ function Register() {
         const check = async () => {
             try {
                 await axios.get(
-                    `/api/v1/islogin`
+                    `https://notes-backend-nu.vercel.app/api/v1/islogin`
                 );
                 Navigate('/')
             } catch (error) {
@@ -32,7 +32,7 @@ function Register() {
 
                 try {
                     const { data } = await axios.post(
-                        `/api/v1/register`,
+                        `https://notes-backend-nu.vercel.app/api/v1/register`,
                         {
                             "name": name,
                             "email": loginEmail,
