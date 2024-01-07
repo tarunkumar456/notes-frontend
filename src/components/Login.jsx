@@ -17,7 +17,7 @@ function Login() {
         const check = async () => {
             try {
                 await axios.get(
-                    `/api/v1/islogin`
+                    `https://notes-backend-nu.vercel.app/api/v1/islogin`
                 );
                 Navigate('/')
             } catch (error) {
@@ -34,7 +34,7 @@ function Login() {
 
             try {
                 const { data } = await axios.post(
-                    `/api/v1/login`,
+                    `https://notes-backend-nu.vercel.app/api/v1/login`,
                     {
                         "email": loginEmail,
                         "password": loginPassword
