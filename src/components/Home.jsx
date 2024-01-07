@@ -34,7 +34,7 @@ function Home() {
 
             } catch (error) {
 
-                Navigate('https://notes-backend-nu.vercel.app/login')
+                Navigate('/login')
             }
         }
         check();
