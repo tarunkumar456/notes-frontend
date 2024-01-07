@@ -41,5 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy":"notes-backend-nu.vercel.app"
+  "proxy":"https://notes-backend-nu.vercel.app"
 }
