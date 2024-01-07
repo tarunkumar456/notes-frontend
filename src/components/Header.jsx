@@ -11,7 +11,7 @@ function Header() {
   const logouthandler = async () => {
     try {
       await axios.post(
-        `/api/v1/logout`
+        `https://notes-backend-nu.vercel.app/api/v1/logout`
       );
       Navigate('/login')
       setLogin(false)
@@ -24,7 +24,7 @@ function Header() {
     const check = async () => {
       try {
         await axios.get(
-          `/api/v1/islogin`
+          `https://notes-backend-nu.vercel.app/api/v1/islogin`
         );
         setLogin(true);
       } catch (error) {
