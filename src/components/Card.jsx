@@ -22,7 +22,8 @@ function Card({ title, discription, ind, id }) {
                     `https://notes-backend-nu.vercel.app/api/v1/deletenotes`,
                     {
                         "id": id
-                    }
+                    },
+                    { withCredentials: true }
                 );
                 alert.success('Deleted successfully');
                 setloading(true)
