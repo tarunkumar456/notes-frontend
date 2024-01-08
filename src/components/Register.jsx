@@ -16,7 +16,8 @@ function Register() {
         const check = async () => {
             try {
                 await axios.get(
-                    `https://notes-backend-nu.vercel.app/api/v1/islogin`
+                    `https://notes-backend-nu.vercel.app/api/v1/islogin`,
+                    { withCredentials: true }
                 );
                 Navigate('/')
             } catch (error) {
@@ -37,7 +38,8 @@ function Register() {
                             "name": name,
                             "email": loginEmail,
                             "password": loginPassword
-                        }
+                        },
+                    { withCredentials: true }
                     );
                     alert.success('Registered successfully');
                     Navigate('/')
