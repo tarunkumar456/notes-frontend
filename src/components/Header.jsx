@@ -30,7 +30,7 @@ function Header() {
         );
         setLogin(true);
       } catch (error) {
-        console.log(error)
+        // console.log(error)
         // alert(error)
       }
     }
