@@ -29,7 +29,8 @@ function Home() {
         const check = async () => {
             try {
                 await axios.get(
-                    `https://notes-backend-nu.vercel.app/api/v1/islogin`
+                    `https://notes-backend-nu.vercel.app/api/v1/islogin`,
+                    { withCredentials: true }
                 );
 
             } catch (error) {
@@ -46,7 +47,8 @@ function Home() {
         const submithandler = async () => {
             try {
                 const { data } = await axios.get(
-                    `https://notes-backend-nu.vercel.app/api/v1/notes`
+                    `https://notes-backend-nu.vercel.app/api/v1/notes`,
+                    { withCredentials: true }
                 );
                 const notes1 = data.notes.notes
                 const arr = [];
