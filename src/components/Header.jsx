@@ -24,7 +24,8 @@ function Header() {
     const check = async () => {
       try {
         await axios.get(
-          `https://notes-backend-nu.vercel.app/api/v1/islogin`
+          `https://notes-backend-nu.vercel.app/api/v1/islogin`,
+          { withCredentials: true }
         );
         setLogin(true);
       } catch (error) {
