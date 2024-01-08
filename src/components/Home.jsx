@@ -65,7 +65,7 @@ function Home() {
 
                 })
                 setloading(false)
-                if(arr.length!=notes.length)
+                if(arr.length!=notes.length || notes==[{ title: 'SAMPLE NOTES', discription: initial }])
                 setnotes(arr)
             } catch (error) {
                 // alert.error(error.response.data.message)
