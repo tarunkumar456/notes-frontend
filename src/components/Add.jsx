@@ -15,7 +15,8 @@ function Add() {
         const check = async () => {
             try {
                 await axios.get(
-                    `https://notes-backend-nu.vercel.app/api/v1/islogin`
+                    `https://notes-backend-nu.vercel.app/api/v1/islogin`,
+                    { withCredentials: true }
                 );
 
             } catch (error) {
@@ -34,7 +35,8 @@ function Add() {
                     {
                         "title": data.title,
                         "discription": data.discription
-                    }
+                    },
+                    { withCredentials: true }
                 );
                 alert.success('Added successfully');
                 Navigate('/')
