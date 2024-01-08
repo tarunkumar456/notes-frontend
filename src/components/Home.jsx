@@ -72,7 +72,7 @@ function Home() {
             }
         }
         submithandler();
-    },[])
+    },[loading])
     return (<Fragment>
         {(loading) ? (
             <Loader />
