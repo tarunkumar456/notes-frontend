@@ -65,6 +65,7 @@ function Home() {
 
                 })
                 setloading(false)
+                if(arr.length!=notes.length)
                 setnotes(arr)
             } catch (error) {
                 // alert.error(error.response.data.message)
@@ -72,7 +73,7 @@ function Home() {
             }
         }
         submithandler();
-    },[loading])
+    })
     return (<Fragment>
         {(loading) ? (
             <Loader />
