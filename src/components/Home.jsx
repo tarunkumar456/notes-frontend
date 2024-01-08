@@ -12,7 +12,7 @@ export const usercontext = React.createContext();
 const initial = 'TAKING NOTE IS THE PRACTICE OF RECORDING INFORMATION FROM DIFFERENT SOURCES AND PLATFORMS. BY TAKING NOTES, THE WRITER RECORDS THE ESSENCE OF THE INFORMATION, FREEING THEIR MIND FROM HAVING TO RECALL EVERYTHING.NOTES ARE COMMONLY DRAWN FROM A TRANSIENT SOURCE, SUCH AS AN ORAL SUCH AS COLLEGE LECTURES, THE MAIN PURPOSE OF TAKING NOTES MAY BE TO IMPLANT THE MATERIAL IN THE MIND, THE WRITTEN NOTES THEMSELVES BEING OF SECONDARY IMPORTANCE.'
 function Home() {
     const alert = useAlert();
-    const [notes, setnotes] = useState([{ title: 'SAMPLE NOTES', discription: initial }]);
+    const [notes, setnotes] = useState([]);
     const [data, setdata] = useState({ title: '', discription: '' });
     const [loading, setloading] = useState(true);
     const Navigate = useNavigate();
@@ -65,7 +65,7 @@ function Home() {
 
                 })
                 setloading(false)
-                if(arr.length!=notes.length || notes==[{ title: 'SAMPLE NOTES', discription: initial }])
+                if(arr.length!=notes.length)
                 setnotes(arr)
             } catch (error) {
                 // alert.error(error.response.data.message)
