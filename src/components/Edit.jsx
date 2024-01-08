@@ -17,7 +17,8 @@ function Edit() {
         const check = async () => {
             try {
                 await axios.get(
-                    `https://notes-backend-nu.vercel.app/api/v1/islogin`
+                    `https://notes-backend-nu.vercel.app/api/v1/islogin`,
+                    { withCredentials: true }
                 );
 
             } catch (error) {
@@ -34,7 +35,8 @@ function Edit() {
                     `https://notes-backend-nu.vercel.app/api/v1/getnote`,
                     {
                         "id": id
-                    }
+                    },
+                    { withCredentials: true }
                 );
                 
                 setdata({ title: data.Note.title, discription: data.Note.discription })
@@ -57,7 +59,8 @@ function Edit() {
                         "id": id,
                         "title": data.title,
                         "discription": data.discription
-                    }
+                    },
+                    { withCredentials: true }
                 );
                 alert.success('Updated successfully');
                 Navigate('/')
