@@ -11,7 +11,8 @@ function Header() {
   const logouthandler = async () => {
     try {
       await axios.post(
-        `https://notes-backend-nu.vercel.app/api/v1/logout`
+        `https://notes-backend-nu.vercel.app/api/v1/logout`,
+                    { withCredentials: true }
       );
       Navigate('/login')
       setLogin(false)
